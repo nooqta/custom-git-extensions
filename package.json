@@ -1,0 +1,29 @@
+{
+  "name": "git-extensions",
+  "version": "1.0.0",
+  "description": "Testing the creating of a git extension using javascript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nooqta/homebrew-git-extensions.git"
+  },
+  "keywords": [
+    "git"
+  ],
+  "author": "Anis Marrouchi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nooqta/homebrew-git-extensions/issues"
+  },
+  "homepage": "https://github.com/nooqta/homebrew-git-extensions#readme",
+  "dependencies": {
+    "git-link": "^0.0.4"
+  },
+  "bin": {
+    "git-noqta": "./index.js"
+  }
+}

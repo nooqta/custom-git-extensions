@@ -20,7 +20,9 @@ Before we get started, you'll need the following:
 
 - Node.js installed on your machine
 - A terminal (such as the command prompt on Windows or the Terminal app on macOS)
+
 Step 1: Create a new Git repository
+--------------
 Create a new folder for your Git extension, and initialize it as a Git repository. You can do this with the following commands:
 
 ```

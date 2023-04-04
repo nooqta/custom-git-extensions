@@ -2,22 +2,34 @@
 
 // Import the helloWorld function from the hello-world.js file
 import helloWorld from "./commands/hello-world.js";
+import { program } from "commander";
 
-  const gitExtension = (args) => {
-    // Extract the command and arguments from the command line
-    const [command, ...rest] = args;
-  
-    // Call the appropriate function based on the command
-    if (command === "hello") {
+const gitExtension = (args) => {
+  // Extract the command and arguments from the command line
+  const [command, ...rest] = args;
+
+  // Call the appropriate function based on the command
+  program
+  .description("A CLI for git extensions")
+    .command("hello")
+    .description("Say hello")
+    .action(() => {
       helloWorld();
-    } else if (command === "greet") {
-      const [name] = rest;
+    });
+  program
+    .command("greet <name>")
+    .description("Greet a user by name")
+    .action((name) => {
       helloWorld(name);
-    } else {
-      console.log("Unknown command");
-    }
-  };
+    });
+  program.on("command:*", () => {
+    console.error("Invalid command: %s\n", program.args.join(" "));
+    program.help();
+    process.exit(1);
+  });
+  program.parse(process.argv);
+};
 
-  gitExtension(process.argv.slice(2));
-  
-  export default gitExtension;
+gitExtension(process.argv.slice(2));
+
+export default gitExtension;

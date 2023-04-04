@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nooqta/homebrew-git-extensions.git"
+    "url": "git+https://github.com/nooqta/custom-git-extensions.git"
   },
   "keywords": [
     "git"
@@ -17,13 +17,13 @@
   "author": "Anis Marrouchi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nooqta/homebrew-git-extensions/issues"
+    "url": "https://github.com/nooqta/custom-git-extensions/issues"
   },
-  "homepage": "https://github.com/nooqta/homebrew-git-extensions#readme",
+  "homepage": "https://github.com/nooqta/custom-git-extensions#readme",
   "dependencies": {
-    "git-link": "^0.0.4"
+    "commander": "^10.0.0"
   },
-  "bin": {
-    "git-noqta": "./index.js"
+  "git": {
+    "noqta": "./index.js"
   }
 }

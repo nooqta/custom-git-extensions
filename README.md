@@ -36,7 +36,6 @@ Step 2: Install dependencies
 We'll be using the commander package to parse command line arguments in our Git extension. You can install it with the following command:
 
 ```
-Copy code
 npm install commander
 ```
 
